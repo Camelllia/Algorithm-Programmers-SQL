@@ -1,0 +1,16 @@
+SELECT
+    A.PRODUCT_ID,
+    A.PRODUCT_NAME,
+    A.PRODUCT_CD,
+    A.CATEGORY,
+    B.PRICE
+FROM
+    FOOD_PRODUCT AS A,
+    (SELECT 
+        MAX(PRICE) AS PRICE
+     FROM
+        FOOD_PRODUCT
+    ) AS B
+WHERE
+    B.PRICE = A.PRICE
+    
