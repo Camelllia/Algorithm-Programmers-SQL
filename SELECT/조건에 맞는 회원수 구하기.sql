@@ -1,0 +1,14 @@
+SELECT
+    COUNT(*)
+FROM
+    USER_INFO
+WHERE
+    AGE 
+        IS NOT NULL
+AND
+    AGE 
+        BETWEEN 20 AND 29
+AND
+    YEAR(JOINED) = 2021
+
+    
